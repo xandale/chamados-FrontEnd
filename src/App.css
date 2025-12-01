@@ -1,0 +1,242 @@
+/* ======== ESTILO GLOBAL ======== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+  color: #1f2937;
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* ======== NAVBAR ======== */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(37, 99, 235, 0.95);
+  color: white;
+  padding: 14px 30px;
+  backdrop-filter: blur(8px);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+nav .nav-left {
+  display: flex;
+  align-items: center;
+}
+
+nav a {
+  color: white;
+  margin-right: 22px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 15px;
+  transition: color 0.2s, transform 0.2s;
+}
+
+nav a:hover {
+  color: #bfdbfe;
+  transform: translateY(-1px);
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.nav-user {
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 6px 14px;
+  border-radius: 6px;
+}
+
+nav button {
+  background: white;
+  color: #2563eb;
+  border: none;
+  border-radius: 6px;
+  padding: 7px 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+nav button:hover {
+  background: #e5e7eb;
+  transform: translateY(-1px);
+}
+
+/* ======== FORMULÁRIOS ======== */
+form {
+  background: rgba(255, 255, 255, 0.9);
+  max-width: 450px;
+  margin: 60px auto;
+  padding: 35px 40px;
+  border-radius: 14px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+
+form:hover {
+  transform: translateY(-2px);
+}
+
+form h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #1e3a8a;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+label {
+  font-weight: 500;
+  color: #374151;
+  display: block;
+  margin-bottom: 6px;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 18px;
+  border: 1.5px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 15px;
+  background: white;
+  transition: all 0.25s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+  outline: none;
+}
+
+button {
+  width: 100%;
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.25s;
+  margin-top: 10px;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #1d4ed8, #1e40af);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(37, 99, 235, 0.25);
+}
+
+button.btn--danger {
+  background: linear-gradient(135deg, #dc2626, #b91c1c);
+}
+
+button.btn--danger:hover {
+  background: linear-gradient(135deg, #b91c1c, #991b1b);
+  box-shadow: 0 6px 15px rgba(220, 38, 38, 0.3);
+}
+
+/* ======== LISTAGEM ======== */
+h2 {
+  text-align: center;
+  margin: 40px 0 25px;
+  color: #1e3a8a;
+  font-weight: 700;
+}
+
+ul {
+  max-width: 800px;
+  margin: 0 auto;
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background: white;
+  margin-bottom: 14px;
+  padding: 18px 22px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: 0.25s;
+  border-left: 4px solid transparent;
+}
+
+li:hover {
+  transform: translateY(-3px);
+  border-left-color: #2563eb;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+}
+
+li strong {
+  color: #111827;
+  font-size: 17px;
+}
+
+li p {
+  color: #6b7280;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+li .actions {
+  display: flex;
+  gap: 10px;
+}
+
+li .actions button {
+  width: auto;
+  padding: 6px 12px;
+  font-size: 14px;
+}
+
+/* ======== RESPONSIVO ======== */
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    gap: 10px;
+    padding: 12px 20px;
+  }
+
+  nav a {
+    margin-right: 0;
+  }
+
+  form {
+    margin: 30px 15px;
+    padding: 25px;
+  }
+
+  li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  li .actions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
