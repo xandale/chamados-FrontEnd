@@ -7,7 +7,7 @@ import MeusChamados from "./pages/MeusChamados";
 import NovoChamado from "./pages/NovoChamado";
 import EditarChamado from "./pages/EditarChamado";
 import TodosChamados from "./pages/TodosChamados";
-import Perfil from "./pages/Perfil";
+import Perfil from "./pages/Perfil.jsx";
 
 
 export default function App() {
